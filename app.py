@@ -6,7 +6,8 @@ import google.genai as genai
 st.set_page_config(page_title="Mental Health AI", page_icon="🧠", layout="centered")
 
 # API setup
-client = genai.Client(api_key="PASTE_YOUR_API_KEY_HERE")
+import os
+client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # Title
 st.title("🧠 Mental Health Support AI")
